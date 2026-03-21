@@ -36,10 +36,10 @@ logger = logging.getLogger(__name__)
 # NOTE: Use 127.0.0.1, NOT "localhost" — avoids DNS resolution
 #       failure on Windows with mysql-connector-python.
 
-DB_HOST     = os.getenv("DB_HOST",     "127.0.0.1")
+DB_HOST     = os.getenv("DB_HOST",     "127.0.0.2")
 DB_PORT     = int(os.getenv("DB_PORT", "3306"))
 DB_USER     = os.getenv("DB_USER",     "root")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "root@2026")   # supports special chars
+DB_PASSWORD = os.getenv("DB_PASSWORD", "password")   # supports special chars
 DB_NAME     = os.getenv("DB_NAME",     "supply_chain_analytics")
 
 CLEANED_DIR = "../data/cleaned/"
