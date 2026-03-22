@@ -25,7 +25,6 @@
 10. [Step 6 — Conditional Formatting](#step-6--conditional-formatting)
 11. [Step 7 — Business Insights](#step-7--business-insights)
 12. [Setup and Installation](#setup-and-installation)
-13. [Interview Talking Points](#interview-talking-points)
 
 ---
 
@@ -421,7 +420,7 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 1 — Executive Overview
 
-![Executive Overview](docs/dashboard_executive_overview.png)
+![Executive Overview](<img width="1080" height="614" alt="image" src="https://github.com/user-attachments/assets/5426f529-61a5-4dca-879b-205affe5c87e" />)
 
 **KPI Cards:**
 - Total Revenue: Rs 102.50M
@@ -440,7 +439,7 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 2 — Sales Analysis
 
-![Sales Analysis](docs/dashboard_sales_analysis.png)
+![Sales Analysis](<img width="1077" height="609" alt="image" src="https://github.com/user-attachments/assets/176e3c03-a9de-46a0-9f41-977b86474f88" />)
 
 **KPI Cards:**
 - Top Category: Accessories
@@ -462,7 +461,7 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 3 — Inventory Analysis
 
-![Inventory Analysis](docs/dashboard_inventory_analysis.png)
+![Inventory Analysis](<img width="1085" height="614" alt="image" src="https://github.com/user-attachments/assets/aa3a8c31-51e6-4cea-b0f3-90fa0bcf21b9" />)
 
 **KPI Cards:**
 - Total SKUs: 500
@@ -482,7 +481,7 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 4 — Supplier Analysis
 
-![Supplier Analysis](docs/dashboard_supplier_analysis.png)
+![Supplier Analysis](<img width="1087" height="610" alt="image" src="https://github.com/user-attachments/assets/f78d8b94-d430-4cc2-b000-38b1cef766fc" />)
 
 **KPI Cards:**
 - Total Suppliers: 50
@@ -950,28 +949,6 @@ export DB_NAME=supply_chain_analytics
 | DAX card shows BLANK | TOPN measure needs text not number | Format pane → turn off Summarisation |
 | `InterfaceError` with password | URL parser breaks on @ character | Wrap password with `quote_plus()` |
 | `Revenue LY` returns BLANK | dim_date not connected to fact_sales | Set relationship in Model view |
-
----
-
-## Interview Talking Points
-
-**Why star schema over 3NF?**
-Star schemas reduce JOIN depth for analytical queries. BI tools like Power BI perform significantly faster with fewer joins. 3NF is designed for OLTP write performance, star schema is designed for OLAP read performance. A fact table connecting to dimension tables in one hop is always faster than traversing multiple normalised tables.
-
-**How did you handle outliers?**
-IQR winsorisation — cap values at Q1 minus 1.5 times IQR and Q3 plus 1.5 times IQR rather than dropping rows. This preserves row count and avoids data loss on legitimate high-value transactions while removing extreme statistical noise.
-
-**What was the 1114 table-full error?**
-pandas `to_sql` with `if_exists='replace'` creates tables using MySQL's default storage engine. On some Windows installs that defaults to MyISAM which has a 4GB per-table file limit. Fixed with the `safe_upload()` helper that runs `ALTER TABLE ENGINE=InnoDB` immediately after creation.
-
-**How would you scale this to production?**
-Replace batch CSV ingestion with Apache Kafka streaming. Use dbt for transformations in Snowflake or BigQuery. Schedule with Apache Airflow DAGs. Connect Power BI via DirectQuery for real-time dashboards instead of import mode. Add CI/CD for the cleaning pipeline with Great Expectations for data quality checks.
-
-**How confident are you in the forecast?**
-MA(3) is a transparent, easily explainable baseline. For production I would evaluate MAPE and MAE on a 20% hold-out set and compare against ARIMA, Prophet, and XGBoost on lag features. Prophet handles weekly and annual seasonality automatically and would be my first production upgrade.
-
-**What does conditional formatting add?**
-CF measures returning 1, 2, or 3 allow automated green/amber/red colouring of KPI cards without hardcoding values. Executives see operational status instantly without reading numbers. Thresholds are fully configurable by changing the IF conditions in the DAX measure — no need to rebuild the visual.
 
 ---
 
