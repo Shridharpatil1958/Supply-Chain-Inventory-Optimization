@@ -983,4 +983,4 @@ MIT License — free to use and adapt with attribution.
 
 *SupplySight — Supply Chain and Inventory Analytics | 2026*
 
-*github.com/yourusername/supplysight*
+*https://github.com/Shridharpatil1958/Supply-Chain-Inventory-Optimization*
