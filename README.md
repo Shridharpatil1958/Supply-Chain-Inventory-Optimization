@@ -421,7 +421,7 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 ### Page 1 — Executive Overview
 
 ![Executive Overview]
-(<img width="1080" height="614" alt="image" src="https://github.com/user-attachments/assets/5426f529-61a5-4dca-879b-205affe5c87e" />)
+<img width="1080" height="614" alt="image" src="https://github.com/user-attachments/assets/5426f529-61a5-4dca-879b-205affe5c87e" />
 
 **KPI Cards:**
 - Total Revenue: Rs 102.50M
@@ -440,7 +440,8 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 2 — Sales Analysis
 
-![Sales Analysis](<img width="1077" height="609" alt="image" src="https://github.com/user-attachments/assets/176e3c03-a9de-46a0-9f41-977b86474f88" />)
+![Sales Analysis]
+<img width="1077" height="609" alt="image" src="https://github.com/user-attachments/assets/176e3c03-a9de-46a0-9f41-977b86474f88" />
 
 **KPI Cards:**
 - Top Category: Accessories
@@ -462,7 +463,8 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 3 — Inventory Analysis
 
-![Inventory Analysis](<img width="1085" height="614" alt="image" src="https://github.com/user-attachments/assets/aa3a8c31-51e6-4cea-b0f3-90fa0bcf21b9" />)
+![Inventory Analysis]
+<img width="1085" height="614" alt="image" src="https://github.com/user-attachments/assets/aa3a8c31-51e6-4cea-b0f3-90fa0bcf21b9" />
 
 **KPI Cards:**
 - Total SKUs: 500
@@ -482,7 +484,8 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 4 — Supplier Analysis
 
-![Supplier Analysis](<img width="1087" height="610" alt="image" src="https://github.com/user-attachments/assets/f78d8b94-d430-4cc2-b000-38b1cef766fc" />)
+![Supplier Analysis]
+<img width="1087" height="610" alt="image" src="https://github.com/user-attachments/assets/f78d8b94-d430-4cc2-b000-38b1cef766fc" />
 
 **KPI Cards:**
 - Total Suppliers: 50
