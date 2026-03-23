@@ -420,7 +420,8 @@ fact_inventory.warehouse_id → dim_warehouse.warehouse_id (Many to One)
 
 ### Page 1 — Executive Overview
 
-![Executive Overview](<img width="1080" height="614" alt="image" src="https://github.com/user-attachments/assets/5426f529-61a5-4dca-879b-205affe5c87e" />)
+![Executive Overview]
+(<img width="1080" height="614" alt="image" src="https://github.com/user-attachments/assets/5426f529-61a5-4dca-879b-205affe5c87e" />)
 
 **KPI Cards:**
 - Total Revenue: Rs 102.50M
